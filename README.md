@@ -1,116 +1,68 @@
-\# Task 3: Infrastructure as Code with Terraform
+# Task 3: Infrastructure as Code with Terraform
 
+This project demonstrates Infrastructure as Code (IaC) by provisioning and managing a Docker container using Terraform.
 
+---
 
-\## Objective
+## Objective
 
+Provision and manage a local Docker container using Terraform.
 
+## Tools Used
 
-Provision a local Docker container using Terraform.
+- Terraform
+- Docker
+- Nginx
 
+## Terraform Workflow
 
+    Terraform Configuration
+             ↓
+       Terraform Init
+             ↓
+      Terraform Validate
+             ↓
+       Terraform Plan
+             ↓
+       Terraform Apply
+             ↓
+       Docker Container
+             ↓
+       Nginx Application
+             ↓
+      Terraform Destroy
 
-\## Tools Used
+---
 
+## Steps Performed
 
+1. Configured the Docker provider in Terraform.
+2. Defined an Nginx Docker image using Terraform.
+3. Created a Docker container using Terraform.
+4. Initialized the project using `terraform init`.
+5. Validated the configuration using `terraform validate`.
+6. Previewed the infrastructure changes using `terraform plan`.
+7. Created the Docker resources using `terraform apply`.
+8. Inspected the Terraform state using `terraform state`.
+9. Accessed the Nginx application through the configured local port.
+10. Removed the Docker resources using `terraform destroy`.
 
-\- Terraform
+---
 
-\- Docker
+## Project Files
 
-\- Nginx
+- `main.tf` - Terraform configuration file.
+- `plan.log` - Terraform plan execution log.
+- `apply.log` - Terraform apply execution log.
+- `destroy.log` - Terraform destroy execution log.
+- `.terraform.lock.hcl` - Records the selected Terraform provider versions.
 
+---
 
+## Result
 
-\## Terraform Pipeline
+Successfully provisioned and managed a local Nginx Docker container using Terraform.
 
+## Conclusion
 
-
-```text
-
-Terraform
-
-&#x20;   ↓
-
-Terraform Init
-
-&#x20;   ↓
-
-Terraform Plan
-
-&#x20;   ↓
-
-Terraform Apply
-
-&#x20;   ↓
-
-Docker Container
-
-&#x20;   ↓
-
-Nginx Application
-
-&#x20;   ↓
-
-Terraform Destroy
-
-```
-
-
-
-\## Steps Performed
-
-
-
-1\. Configured the Docker provider in Terraform.
-
-2\. Created an Nginx Docker image using Terraform.
-
-3\. Created a Docker container using Terraform.
-
-4\. Used `terraform init` to initialize the project.
-
-5\. Used `terraform validate` to validate the configuration.
-
-6\. Used `terraform plan` to preview the changes.
-
-7\. Used `terraform apply` to create the Docker resources.
-
-8\. Checked the Terraform state using `terraform state`.
-
-9\. Tested the application using `http://localhost:8080`.
-
-10\. Used `terraform destroy` to remove the resources.
-
-
-
-\## Files
-
-
-
-\- `main.tf` - Terraform configuration
-
-\- `plan.log` - Terraform plan execution log
-
-\- `apply.log` - Terraform apply execution log
-
-\- `destroy.log` - Terraform destroy execution log
-
-\- `terraform.tfstate` - Terraform state file
-
-
-
-\## Result
-
-
-
-Successfully provisioned and managed a local Docker container using Terraform.
-
-
-
-\## Conclusion
-
-
-
-This task demonstrates Infrastructure as Code (IaC) using Terraform to automate Docker container provisioning and management.
-
+This project demonstrates Infrastructure as Code (IaC) by automating Docker container provisioning and management with Terraform.
